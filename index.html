@@ -24,7 +24,6 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
         }
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
@@ -110,9 +109,7 @@
                 </div>
                 <span class="text-xs font-semibold text-[#f27a1a] hidden sm:inline">Sınırlı Stok & Özel Fiyatlar</span>
             </div>
-            <div id="campaignGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-                <!-- Kampanyalı ürünler buraya render edilecek -->
-            </div>
+            <div id="campaignGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4"></div>
         </section>
 
         <!-- Tüm Ürünler Başlık -->
@@ -134,13 +131,11 @@
                     <i class="fa-solid fa-store"></i>
                 </div>
                 <h3 class="text-lg font-bold text-gray-800 mb-1">Henüz Ürün Eklenmemiş</h3>
-                <p class="text-sm text-gray-500 max-w-md mx-auto">Mağaza vitrini şu an boş. Çok yakında en yeni ürünlerimiz burada listelenecektir.</p>
+                <p class="text-sm text-gray-500 max-w-md mx-auto">Mağaza vitrini şu an boş. Admin panelinden ilk ürünlerinizi ekleyebilirsiniz.</p>
             </div>
 
             <!-- Ürün Listesi Grid -->
-            <div id="productsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-                <!-- Ürün kartları buraya render edilecek -->
-            </div>
+            <div id="productsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4"></div>
         </section>
     </main>
 
@@ -152,7 +147,7 @@
                     <span class="bg-[#f27a1a] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Yönetici Modu</span>
                     <h1 class="text-xl font-bold">PREMİUM DROP SHOP - Ürün & Kampanya Yönetimi</h1>
                 </div>
-                <p class="text-xs text-gray-400 mt-1">Eklediğiniz veya düzenlediğiniz tüm ürünler anında canlı mağazada güncellenir. Hiçbir alan zorunlu değildir.</p>
+                <p class="text-xs text-gray-400 mt-1">Eklediğiniz veya düzenlediğiniz tüm ürünler anında canlı mağazada güncellenir.</p>
             </div>
             <button onclick="exitAdminMode()" class="bg-white/10 hover:bg-white/20 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition flex items-center gap-2">
                 <i class="fa-solid fa-arrow-left"></i> Mağazaya Dön
@@ -217,11 +212,11 @@
                     <div class="grid grid-cols-2 gap-3">
                         <div>
                             <label class="block text-xs font-semibold text-gray-700 mb-1">Ürün Rengi</label>
-                            <input type="text" id="productColor" placeholder="Örn: Siyah, Beyaz, Çok Renkli" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]">
+                            <input type="text" id="productColor" placeholder="Örn: Siyah, Beyaz" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-700 mb-1">Ürün Paket Boyu / Ebat</label>
-                            <input type="text" id="productPackageSize" placeholder="Örn: S-M-L, 500ml, Tekli Paket" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]">
+                            <input type="text" id="productPackageSize" placeholder="Örn: S-M-L, 500ml" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]">
                         </div>
                     </div>
 
@@ -239,7 +234,7 @@
                     <!-- Ürün Açıklaması -->
                     <div>
                         <label class="block text-xs font-semibold text-gray-700 mb-1">Ürün Açıklaması</label>
-                        <textarea id="productDesc" rows="3" placeholder="Ürün detayları, kumaş/malzeme bilgisi vb..." class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]"></textarea>
+                        <textarea id="productDesc" rows="3" placeholder="Ürün detayları..." class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]"></textarea>
                     </div>
 
                     <!-- Kampanyalı Ürün Köşesi Seçeneği -->
@@ -295,9 +290,7 @@
                         <h3 id="modalTitle" class="text-xl font-bold text-gray-900 leading-snug"></h3>
                         <p id="modalPrice" class="text-2xl font-extrabold ty-orange-text mt-2"></p>
 
-                        <!-- Özellik Rozetleri -->
-                        <div id="modalSpecs" class="mt-4 space-y-2 text-xs text-gray-600 bg-gray-50 p-3 rounded-xl border border-gray-100">
-                        </div>
+                        <div id="modalSpecs" class="mt-4 space-y-2 text-xs text-gray-600 bg-gray-50 p-3 rounded-xl border border-gray-100"></div>
 
                         <div class="mt-4">
                             <h4 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Ürün Açıklaması</h4>
@@ -316,7 +309,6 @@
     <!-- SEPET VE WHATSAPP SİPARİŞ MODALI -->
     <div id="cartModal" class="fixed inset-0 bg-black/60 z-50 hidden justify-end backdrop-blur-xs">
         <div class="bg-white w-full max-w-md h-full flex flex-col shadow-2xl">
-            <!-- Sepet Başlık -->
             <div class="px-5 py-4 border-b border-gray-100 flex items-center justify-between bg-white">
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-bag-shopping ty-orange-text text-lg"></i>
@@ -327,14 +319,9 @@
                 </button>
             </div>
 
-            <!-- Sepet İçeriği & Müşteri Formu -->
             <div class="flex-1 overflow-y-auto p-5 space-y-5">
-                <!-- Sepetteki Ürünler -->
-                <div id="cartItemsContainer" class="space-y-3">
-                    <!-- Sepet öğeleri buraya gelecek -->
-                </div>
+                <div id="cartItemsContainer" class="space-y-3"></div>
 
-                <!-- Sipariş Bilgileri Formu (Sepet doluysa görünür) -->
                 <div id="checkoutFormContainer" class="hidden border-t border-gray-200 pt-4 space-y-3">
                     <h3 class="text-sm font-bold text-gray-800 flex items-center gap-1.5">
                         <i class="fa-solid fa-truck-fast ty-orange-text"></i> Teslimat Bilgileri
@@ -352,17 +339,16 @@
 
                     <div>
                         <label class="block text-xs font-semibold text-gray-700 mb-1">Teslimat Adresi *</label>
-                        <textarea id="custAddress" rows="2" required placeholder="Mahalle, sokak, bina no, daire, ilçe/il..." class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]"></textarea>
+                        <textarea id="custAddress" rows="2" required placeholder="Mahalle, sokak, bina no, daire..." class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]"></textarea>
                     </div>
 
                     <div>
                         <label class="block text-xs font-semibold text-gray-700 mb-1">Sipariş Notu / Açıklama <span class="text-gray-400 font-normal">(İsteğe Bağlı)</span></label>
-                        <textarea id="custNote" rows="2" placeholder="Varsa renk/beden tercihiniz veya kurye notunuz..." class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]"></textarea>
+                        <textarea id="custNote" rows="2" placeholder="Varsa kurye notunuz..." class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-[#f27a1a]"></textarea>
                     </div>
                 </div>
             </div>
 
-            <!-- Sepet Alt Toplam ve WhatsApp Butonu -->
             <div id="cartFooter" class="hidden p-5 border-t border-gray-100 bg-gray-50 space-y-3">
                 <div class="flex justify-between items-center text-sm">
                     <span class="text-gray-600 font-medium">Toplam Tutar:</span>
@@ -390,39 +376,36 @@
         </div>
     </footer>
 
-    <!-- Firebase SDK v10 (Modular) & Uygulama Mantığı -->
+    <!-- Firebase SDK v10 & Uygulama Mantığı -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
         import { 
-            getFirestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc, onSnapshot, query, orderBy, serverTimestamp 
+            getFirestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc, onSnapshot 
         } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
-        // Firebase Yapılandırması
+        // Yeni Firebase Yapılandırmanız (devasun)
         const firebaseConfig = {
-            apiKey: "AIzaSyAJXe8pUCqG-0MSSQNpCTtPtOqc85TgGVU",
-            authDomain: "dropshop-4b4b4.firebaseapp.com",
-            projectId: "dropshop-4b4b4",
-            storageBucket: "dropshop-4b4b4.firebasestorage.app",
-            messagingSenderId: "196516382577",
-            appId: "1:196516382577:web:ef185c5302a79454e8d8d0"
+            apiKey: "AIzaSyDwI0w6OP6vmIvts6ZDf6GShxYgMh934RA",
+            authDomain: "devasun.firebaseapp.com",
+            projectId: "devasun",
+            storageBucket: "devasun.firebasestorage.app",
+            messagingSenderId: "141210249778",
+            appId: "1:141210249778:web:fddc2429d244e9f7a02a2b"
         };
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
         const productsCol = collection(db, "products");
 
-        // Sabitler
         const IMGBB_API_KEY = "0af31d6305011a50f4013c181558d6a7";
         const WHATSAPP_NUMBER = "905451159968";
         const FALLBACK_IMG = "https://placehold.co/400x400/f3f4f6/9ca3af?text=Gorsel+Yok";
 
-        // Uygulama Durumu (State)
         let allProducts = [];
         let cart = JSON.parse(localStorage.getItem("pds_cart") || "[]");
         let selectedCategory = "ALL";
         let isAdminAuthorized = false;
 
-        // --- HASH (#0707) KONTROLÜ ---
         function checkAdminHash() {
             if (window.location.hash === "#0707") {
                 isAdminAuthorized = true;
@@ -457,7 +440,6 @@
             }
         };
 
-        // --- BİLDİRİM TOAST ---
         window.showToast = (msg) => {
             const toast = document.getElementById("toast");
             document.getElementById("toastMsg").innerText = msg;
@@ -469,14 +451,13 @@
             }, 3000);
         };
 
-        // --- IMGBB GÖRSEL YÜKLEME ---
         window.uploadToImgBB = async (event) => {
             const file = event.target.files[0];
             if (!file) return;
 
             const statusEl = document.getElementById("uploadStatus");
             const saveBtn = document.getElementById("saveProductBtn");
-            statusEl.innerHTML = '<i class="fa-solid fa-spinner fa-spin ty-orange-text"></i> Görsel ImgBB sunucusuna yükleniyor...';
+            statusEl.innerHTML = '<i class="fa-solid fa-spinner fa-spin ty-orange-text"></i> Görsel yükleniyor...';
             saveBtn.disabled = true;
             saveBtn.classList.add("opacity-60");
 
@@ -493,13 +474,13 @@
                     const url = data.data.url;
                     document.getElementById("productImageUrl").value = url;
                     previewManualUrl(url);
-                    statusEl.innerHTML = '<span class="text-green-600 font-semibold"><i class="fa-solid fa-check"></i> Görsel başarıyla yüklendi!</span>';
+                    statusEl.innerHTML = '<span class="text-green-600 font-semibold"><i class="fa-solid fa-check"></i> Görsel yüklendi!</span>';
                 } else {
-                    statusEl.innerHTML = '<span class="text-red-500">Yükleme başarısız oldu. Tekrar deneyin.</span>';
+                    statusEl.innerHTML = '<span class="text-red-500">Yükleme başarısız.</span>';
                 }
             } catch (err) {
                 console.error(err);
-                statusEl.innerHTML = '<span class="text-red-500">Bağlantı hatası oluştu.</span>';
+                statusEl.innerHTML = '<span class="text-red-500">Bağlantı hatası.</span>';
             } finally {
                 saveBtn.disabled = false;
                 saveBtn.classList.remove("opacity-60");
@@ -515,12 +496,10 @@
             }
         };
 
-        // --- FIREBASE GERÇEK ZAMANLI DİNLEME ---
+        // Firestore Canlı Dinleyici
         onSnapshot(productsCol, (snapshot) => {
             document.getElementById("loadingState").classList.add("hidden");
             allProducts = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
-            
-            // Tarihe göre yeni eklenenler üstte sıralansın
             allProducts.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
 
             renderCategories();
@@ -528,12 +507,8 @@
             renderAdminList();
         }, (error) => {
             console.error("Firestore Hatası:", error);
-            document.getElementById("loadingState").innerHTML = `
-                <p class="text-red-500 text-sm font-semibold">Veritabanı bağlantısı kurulamadı. Firebase Firestore kurallarını kontrol edin.</p>
-            `;
         });
 
-        // --- ÜRÜN EKLEME / GÜNCELLEME (ADMIN) ---
         window.handleProductSubmit = async (e) => {
             e.preventDefault();
             const editId = document.getElementById("editProductId").value;
@@ -558,16 +533,16 @@
             try {
                 if (editId) {
                     await updateDoc(doc(db, "products", editId), productData);
-                    showToast("Ürün başarıyla güncellendi!");
+                    showToast("Ürün güncellendi!");
                 } else {
                     productData.createdAt = Date.now();
                     await addDoc(productsCol, productData);
-                    showToast("Yeni ürün mağazaya eklendi!");
+                    showToast("Ürün eklendi!");
                 }
                 resetAdminForm();
             } catch (err) {
                 console.error(err);
-                alert("Kayıt sırasında hata oluştu: " + err.message);
+                alert("Kayıt hatası: " + err.message);
             } finally {
                 saveBtn.disabled = false;
                 saveBtn.classList.remove("opacity-60");
@@ -610,14 +585,14 @@
         window.toggleCampaignStatus = async (id, currentStatus) => {
             try {
                 await updateDoc(doc(db, "products", id), { isCampaign: !currentStatus });
-                showToast(!currentStatus ? "Kampanyalı ürünler köşesine eklendi!" : "Kampanyalı ürünler köşesinden çıkarıldı.");
+                showToast("Kampanya durumu güncellendi!");
             } catch (err) {
                 console.error(err);
             }
         };
 
         window.deleteProduct = async (id) => {
-            if (!confirm("Bu ürünü kalıcı olarak silmek istediğinize emin misiniz?")) return;
+            if (!confirm("Bu ürünü silmek istediğinize emin misiniz?")) return;
             try {
                 await deleteDoc(doc(db, "products", id));
                 showToast("Ürün silindi.");
@@ -626,20 +601,19 @@
             }
         };
 
-        // --- ADMIN LİSTESİ RENDER ---
         function renderAdminList() {
             const container = document.getElementById("adminProductsList");
             document.getElementById("adminTotalCount").innerText = `${allProducts.length} Ürün`;
 
             if (allProducts.length === 0) {
-                container.innerHTML = `<p class="text-sm text-gray-400 text-center py-10">Henüz kayıtlı ürün bulunmuyor. Sol taraftan ilk ürününüzü ekleyebilirsiniz.</p>`;
+                container.innerHTML = `<p class="text-sm text-gray-400 text-center py-10">Henüz kayıtlı ürün bulunmuyor.</p>`;
                 return;
             }
 
             container.innerHTML = allProducts.map(p => {
                 const priceText = p.price !== null && p.price !== undefined ? `${Number(p.price).toLocaleString('tr-TR', {minimumFractionDigits: 2})} TL` : "Fiyat Belirtilmedi";
                 return `
-                <div class="border border-gray-200 rounded-xl p-3 flex items-center justify-between gap-3 hover:border-orange-200 transition bg-gray-50/50">
+                <div class="border border-gray-200 rounded-xl p-3 flex items-center justify-between gap-3 bg-gray-50/50">
                     <div class="flex items-center gap-3 min-w-0">
                         <img src="${p.imageUrl || FALLBACK_IMG}" onerror="this.src='${FALLBACK_IMG}'" class="w-14 h-14 rounded-lg object-cover border border-gray-200 shrink-0 bg-white">
                         <div class="min-w-0">
@@ -648,21 +622,17 @@
                                 ${p.isCampaign ? '<span class="text-[10px] font-bold bg-orange-100 text-[#f27a1a] px-1.5 py-0.5 rounded">Kampanyalı</span>' : ''}
                             </div>
                             <p class="text-xs font-extrabold ty-orange-text mt-0.5">${priceText}</p>
-                            <p class="text-[11px] text-gray-500 truncate mt-0.5">
-                                ${[p.catalog, p.color, p.packageSize].filter(Boolean).join(" • ") || "Ek detay yok"}
-                            </p>
+                            <p class="text-[11px] text-gray-500 truncate mt-0.5">${[p.catalog, p.color, p.packageSize].filter(Boolean).join(" • ") || "Ek detay yok"}</p>
                         </div>
                     </div>
-
                     <div class="flex items-center gap-1.5 shrink-0">
-                        <button onclick="toggleCampaignStatus('${p.id}', ${!!p.isCampaign})" title="Kampanya Köşesine Ekle/Çıkar" 
-                            class="px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition ${p.isCampaign ? 'bg-[#f27a1a] text-white border-[#f27a1a]' : 'bg-white text-gray-600 border-gray-200 hover:border-[#f27a1a]'}">
+                        <button onclick="toggleCampaignStatus('${p.id}', ${!!p.isCampaign})" title="Kampanya Köşesi" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold border ${p.isCampaign ? 'bg-[#f27a1a] text-white border-[#f27a1a]' : 'bg-white text-gray-600 border-gray-200'}">
                             <i class="fa-solid fa-bolt"></i>
                         </button>
-                        <button onclick="editProduct('${p.id}')" title="Düzenle" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-blue-50 text-blue-600 hover:bg-blue-100 transition">
+                        <button onclick="editProduct('${p.id}')" title="Düzenle" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-blue-50 text-blue-600">
                             <i class="fa-solid fa-pen"></i>
                         </button>
-                        <button onclick="deleteProduct('${p.id}')" title="Sil" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-red-50 text-red-600 hover:bg-red-100 transition">
+                        <button onclick="deleteProduct('${p.id}')" title="Sil" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-red-50 text-red-600">
                             <i class="fa-solid fa-trash"></i>
                         </button>
                     </div>
@@ -671,7 +641,6 @@
             }).join("");
         }
 
-        // --- KATEGORİLER & VİTRİN RENDER ---
         function renderCategories() {
             const nav = document.getElementById("categoryNav");
             const categories = [...new Set(allProducts.map(p => p.catalog).filter(Boolean))];
@@ -700,11 +669,9 @@
             renderStorefront();
         };
 
-        window.filterProducts = () => {
-            renderStorefront();
-        };
+        window.filterProducts = () => { renderStorefront(); };
 
-        function createProductCardHTML(p, isCampaignCard = false) {
+        function createProductCardHTML(p) {
             const hasPrice = p.price !== null && p.price !== undefined && p.price !== "";
             const priceDisplay = hasPrice ? `${Number(p.price).toLocaleString('tr-TR', {minimumFractionDigits: 2})} TL` : "Fiyat Sorunuz";
             const isFreeShipping = p.shipping && p.shipping.includes("Satıcıya Ait");
@@ -713,38 +680,17 @@
             <div class="product-card bg-white rounded-xl border border-gray-200/80 overflow-hidden flex flex-col justify-between group">
                 <div onclick="openProductDetail('${p.id}')" class="cursor-pointer">
                     <div class="relative aspect-square bg-gray-50 overflow-hidden border-b border-gray-100">
-                        <img src="${p.imageUrl || FALLBACK_IMG}" alt="${escapeHtml(p.name)}" onerror="this.src='${FALLBACK_IMG}'" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        
-                        ${isFreeShipping ? `
-                        <span class="absolute top-2 left-2 bg-gray-900/85 text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
-                            <i class="fa-solid fa-box text-[#f27a1a]"></i> Kargo Bedava
-                        </span>` : ''}
-
-                        ${p.isCampaign ? `
-                        <span class="absolute top-2 right-2 ty-orange text-white text-[10px] font-extrabold px-2 py-0.5 rounded shadow-xs">
-                            FIRSAT
-                        </span>` : ''}
+                        <img src="${p.imageUrl || FALLBACK_IMG}" alt="${escapeHtml(p.name)}" onerror="this.src='${FALLBACK_IMG}'" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        ${isFreeShipping ? `<span class="absolute top-2 left-2 bg-gray-900/85 text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1"><i class="fa-solid fa-box text-[#f27a1a]"></i> Kargo Bedava</span>` : ''}
+                        ${p.isCampaign ? `<span class="absolute top-2 right-2 ty-orange text-white text-[10px] font-extrabold px-2 py-0.5 rounded shadow-xs">FIRSAT</span>` : ''}
                     </div>
-
                     <div class="p-3 space-y-1.5">
                         ${p.catalog ? `<span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">${escapeHtml(p.catalog)}</span>` : ''}
-                        <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-2 leading-snug group-hover:text-[#f27a1a] transition">
-                            ${escapeHtml(p.name)}
-                        </h3>
-                        
-                        ${(p.color || p.packageSize) ? `
-                        <div class="flex flex-wrap gap-1 pt-0.5">
-                            ${p.color ? `<span class="text-[10px] bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">${escapeHtml(p.color)}</span>` : ''}
-                            ${p.packageSize ? `<span class="text-[10px] bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">${escapeHtml(p.packageSize)}</span>` : ''}
-                        </div>` : ''}
-
-                        <div class="pt-1">
-                            <span class="text-sm sm:text-base font-extrabold ty-orange-text">${priceDisplay}</span>
-                        </div>
+                        <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-2 leading-snug group-hover:text-[#f27a1a] transition">${escapeHtml(p.name)}</h3>
+                        ${(p.color || p.packageSize) ? `<div class="flex flex-wrap gap-1 pt-0.5">${p.color ? `<span class="text-[10px] bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">${escapeHtml(p.color)}</span>` : ''}${p.packageSize ? `<span class="text-[10px] bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">${escapeHtml(p.packageSize)}</span>` : ''}</div>` : ''}
+                        <div class="pt-1"><span class="text-sm sm:text-base font-extrabold ty-orange-text">${priceDisplay}</span></div>
                     </div>
                 </div>
-
                 <div class="px-3 pb-3 pt-1">
                     <button onclick="addToCart('${p.id}')" class="w-full border border-[#f27a1a] text-[#f27a1a] hover:bg-[#f27a1a] hover:text-white font-bold text-xs py-2 rounded-lg transition flex items-center justify-center gap-1.5">
                         <i class="fa-solid fa-cart-plus"></i> Sepete Ekle
@@ -771,16 +717,14 @@
 
             emptyState.classList.add("hidden");
 
-            // Kampanyalı Ürünler Köşesi (Arama yoksa veya tüm ürünlerdeysek göster)
             const campaignProducts = allProducts.filter(p => p.isCampaign);
             if (campaignProducts.length > 0 && selectedCategory === "ALL" && !searchQuery) {
                 campaignSection.classList.remove("hidden");
-                campaignGrid.innerHTML = campaignProducts.map(p => createProductCardHTML(p, true)).join("");
+                campaignGrid.innerHTML = campaignProducts.map(p => createProductCardHTML(p)).join("");
             } else {
                 campaignSection.classList.add("hidden");
             }
 
-            // Filtrelenmiş Ana Liste
             const filtered = allProducts.filter(p => {
                 const matchCat = selectedCategory === "ALL" || p.catalog === selectedCategory;
                 const matchSearch = !searchQuery || 
@@ -800,7 +744,6 @@
             }
         }
 
-        // --- ÜRÜN DETAY MODALI ---
         window.openProductDetail = (id) => {
             const p = allProducts.find(item => item.id === id);
             if (!p) return;
@@ -816,10 +759,9 @@
             if (p.isCampaign) campTag.classList.remove("hidden");
             else campTag.classList.add("hidden");
 
-            // Özellikler
             let specsHtml = "";
             if (p.color) specsHtml += `<div class="flex justify-between"><span class="text-gray-400">Renk:</span><span class="font-semibold text-gray-800">${escapeHtml(p.color)}</span></div>`;
-            if (p.packageSize) specsHtml += `<div class="flex justify-between"><span class="text-gray-400">Paket Boyu / Ebat:</span><span class="font-semibold text-gray-800">${escapeHtml(p.packageSize)}</span></div>`;
+            if (p.packageSize) specsHtml += `<div class="flex justify-between"><span class="text-gray-400">Paket Boyu:</span><span class="font-semibold text-gray-800">${escapeHtml(p.packageSize)}</span></div>`;
             if (p.shipping) specsHtml += `<div class="flex justify-between"><span class="text-gray-400">Kargo Ödemesi:</span><span class="font-semibold text-[#f27a1a]">${escapeHtml(p.shipping)}</span></div>`;
             
             const specsBox = document.getElementById("modalSpecs");
@@ -830,7 +772,7 @@
                 specsBox.classList.add("hidden");
             }
 
-            document.getElementById("modalDesc").innerText = p.description || "Bu ürün için ek açıklama girilmemiştir.";
+            document.getElementById("modalDesc").innerText = p.description || "Açıklama girilmedi.";
 
             const addBtn = document.getElementById("modalAddToCartBtn");
             addBtn.onclick = () => {
@@ -849,7 +791,6 @@
             modal.classList.remove("flex");
         };
 
-        // --- SEPET YÖNETİMİ ---
         function saveCart() {
             localStorage.setItem("pds_cart", JSON.stringify(cart));
             updateCartUI();
@@ -902,8 +843,7 @@
                         <div class="w-14 h-14 bg-orange-50 text-[#f27a1a] rounded-full flex items-center justify-center mx-auto text-xl">
                             <i class="fa-solid fa-cart-arrow-down"></i>
                         </div>
-                        <p class="text-sm font-bold text-gray-800">Sepetiniz şu an boş</p>
-                        <p class="text-xs text-gray-500">Alışverişe başlamak için vitrindeki ürünleri sepetinize ekleyebilirsiniz.</p>
+                        <p class="text-sm font-bold text-gray-800">Sepetiniz boş</p>
                     </div>
                 `;
                 formBox.classList.add("hidden");
@@ -927,9 +867,9 @@
                         <p class="text-xs font-extrabold ty-orange-text mt-0.5">${item.price ? (subTotal.toLocaleString('tr-TR', {minimumFractionDigits: 2}) + ' TL') : 'Fiyat Belirtilmedi'}</p>
                     </div>
                     <div class="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-1.5 py-1">
-                        <button onclick="updateCartQty('${item.id}', -1)" class="w-5 h-5 text-xs font-bold text-gray-600 hover:text-[#f27a1a]">-</button>
+                        <button onclick="updateCartQty('${item.id}', -1)" class="w-5 h-5 text-xs font-bold text-gray-600">-</button>
                         <span class="text-xs font-bold w-4 text-center">${item.qty}</span>
-                        <button onclick="updateCartQty('${item.id}', 1)" class="w-5 h-5 text-xs font-bold text-gray-600 hover:text-[#f27a1a]">+</button>
+                        <button onclick="updateCartQty('${item.id}', 1)" class="w-5 h-5 text-xs font-bold text-gray-600">+</button>
                     </div>
                 </div>
                 `;
@@ -951,17 +891,16 @@
             modal.classList.remove("flex");
         };
 
-        // --- WHATSAPP OTOMATİK SİPARİŞ YÖNLENDİRME ---
         window.completeOrderViaWhatsApp = () => {
             if (cart.length === 0) return;
 
             const name = document.getElementById("custName").value.trim();
             const phone = document.getElementById("custPhone").value.trim();
             const address = document.getElementById("custAddress").value.trim();
-            const note = document.getElementById("custNote").value.trim(); // Zorunlu değil
+            const note = document.getElementById("custNote").value.trim();
 
             if (!name || !phone || !address) {
-                alert("Lütfen Ad Soyad, Telefon Numarası ve Teslimat Adresi alanlarını eksiksiz doldurunuz.");
+                alert("Lütfen Ad Soyad, Telefon ve Adres alanlarını doldurunuz.");
                 return;
             }
 
@@ -983,16 +922,13 @@
             message += `• Ad Soyad: ${name}\n`;
             message += `• Telefon: ${phone}\n`;
             message += `• Adres: ${address}\n`;
-            if (note) {
-                message += `• Açıklama / Not: ${note}\n`;
-            }
+            if (note) message += `• Açıklama: ${note}\n`;
             message += `\n📦 *Sipariş Edilen Ürünler:*\n${productLines}\n\n`;
             message += `💰 *Toplam Tutar:* ${totalAmount.toLocaleString('tr-TR', {minimumFractionDigits: 2})} TL`;
 
             const encodedMessage = encodeURIComponent(message);
             const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
-            // Sepeti temizle ve WhatsApp'a yönlendir
             cart = [];
             saveCart();
             closeCartModal();
@@ -1006,7 +942,6 @@
             return div.innerHTML;
         }
 
-        // Başlangıç kontrolleri
         checkAdminHash();
         updateCartUI();
     </script>
